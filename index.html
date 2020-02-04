@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Driving Survey Project</title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Merienda');
+            @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+            @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed');
+            @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+        </style>
+    <style id="jsbin-css">
+body {
+    background-image: url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100%;
+            background-attachment: fixed;
+}
+
+h1{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+    font-family: 'Merienda', cursive;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.questions{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);    
+}
+
+.answer{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);       
+}
+
+hr{
+    border: solid red 2px;    
+}
+
+.ipt1{
+    width:150px;
+}
+
+.ipt2{
+    width:150px;
+}
+
+#btn1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    border: groove 4px red;
+    border-radius:10px;    
+}
+
+.btn2{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    border: groove 4px red;
+    border-radius:10px;    
+}
+
+#sur {
+    height: 1570px;
+    width: 850px;
+    margin: 0 auto;
+    background-color: #bdc3c7;
+    opacity: 0.9;
+    border: solid 5px red;
+    text-align: center;
+    border-radius: 10px;
+    border: ridge 6px red;
+    font-family: 'Charmonman', cursive;
+}
+
+.opt{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt2{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt3{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt4{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt5{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+</style>
+</head>
+    
+    <body>
+        <h1>Driving Survey</h1>
+        
+        <div id="sur">
+            <h1 class="questions">Please answer all questions truthfully</h1>
+            <hr>
+            <h1 class="answer"> Please enter you first and last name</h1>
+            <br>
+            <input class="ipt1" placeholder="Enter first name here">
+            <br>
+            <br>
+            <input class="ipt2" placeholder="Enter last name here">
+            <br>
+            <br>
+            <hr>
+            <h1 class="answer">Please enter your age and date of birth</h1>
+            <br>
+            <input class="ipt3" placeholder="Age" type="number" max="99" min="13">
+            <br>
+            <br>
+              <input class="ipt4" name="bday" min="1920-01-01" max="2019-01-01" type="date">
+            <br>
+            <br>
+            <hr>
+            <form id="eyeForm">
+            <h1 class="answer">Please choose your eye color</h1>
+            <br>
+            <input name="eyes" value="Black" type="radio">Black<br>
+            <input name="eyes" value="Blue" type="radio">Blue<br>
+            <input name="eyes" value="Hazel" type="radio">Hazel
+            <br>
+            </form>
+            <br>
+            <br>
+            <button id="btn1">Submit</button>
+            <button class="btn2">Rest</button>
+            <br>
+            <br>
+            <p class="opt"></p>
+            <p class="opt2"></p>
+            <p class="opt3"></p>
+            <p class="opt4"></p>
+            <p class="opt5"></p>
+        </div>
+        
+    <script id="jsbin-javascript">
+var _0x3fdb=['click','userAge','.opt3','userFirst','value','eyeForm','Old\x20enough\x20for\x20a\x20license','btn1','log','printInfo','userLast','.opt','.opt5','.ipt4','Old\x20enough\x20for\x20a\x20permit,\x20but\x20not\x20full\x20license','getElementById','userEyecolor','calcStuff','.ipt2','Too\x20young\x20to\x20drive','innerHTML','querySelector','.ipt3','userBirthday','.opt4','eyes'];(function(_0x1e6404,_0x3feca2){var _0x35b414=function(_0x324875){while(--_0x324875){_0x1e6404['push'](_0x1e6404['shift']());}};_0x35b414(++_0x3feca2);}(_0x3fdb,0x188));var _0x5e37=function(_0x1e6404,_0x3feca2){_0x1e6404=_0x1e6404-0x0;var _0x35b414=_0x3fdb[_0x1e6404];return _0x35b414;};var first;var last;var age;var birthday;var eyecolor;var driveSur={'userFirst':'','userLast':'','userAge':'','userBirthday':'','userEyecolor':'','calcStuff':function(_0x568f09){if(_0x568f09>=0x11){alert(_0x5e37('0x4'));}else if(_0x568f09===0x10){alert(_0x5e37('0xc'));}else{alert(_0x5e37('0x11'));}},'printInfo':function(){document[_0x5e37('0x13')](_0x5e37('0x9'))[_0x5e37('0x12')]=this[_0x5e37('0x1')];document[_0x5e37('0x13')]('.opt2')['innerHTML']=this[_0x5e37('0x8')];document[_0x5e37('0x13')](_0x5e37('0x0'))[_0x5e37('0x12')]=this[_0x5e37('0x19')];document[_0x5e37('0x13')](_0x5e37('0x16'))[_0x5e37('0x12')]=this[_0x5e37('0x15')];document[_0x5e37('0x13')](_0x5e37('0xa'))['innerHTML']=this[_0x5e37('0xe')];}};document['getElementById'](_0x5e37('0x5'))['addEventListener'](_0x5e37('0x18'),function(){first=document[_0x5e37('0x13')]('.ipt1')['value'];last=document[_0x5e37('0x13')](_0x5e37('0x10'))[_0x5e37('0x2')];age=parseInt(document[_0x5e37('0x13')](_0x5e37('0x14'))[_0x5e37('0x2')]);birthday=document[_0x5e37('0x13')](_0x5e37('0xb'))[_0x5e37('0x2')];var _0x1a84dd=document[_0x5e37('0xd')](_0x5e37('0x3'));var _0xd35691=_0x1a84dd[_0x5e37('0x17')][_0x5e37('0x2')];console[_0x5e37('0x6')](_0xd35691);driveSur[_0x5e37('0x1')]=first;driveSur[_0x5e37('0x8')]=last;driveSur[_0x5e37('0x19')]=age;driveSur[_0x5e37('0x15')]=birthday;driveSur[_0x5e37('0xe')]=_0xd35691;console['log'](driveSur['userEyecolor']);driveSur[_0x5e37('0xf')](driveSur['userAge']);driveSur[_0x5e37('0x7')]();});
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+    <head>
+        <title>Driving Survey Project</title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Merienda');
+            @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+            @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed');
+            @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+        </style>
+    </head>
+    
+    <body>
+        <h1>Driving Survey</h1>
+        
+        <div id="sur">
+            <h1 class="questions">Please answer all questions truthfully</h1>
+            <hr>
+            <h1 class="answer"> Please enter you first and last name</h1>
+            <br>
+            <input class="ipt1" placeholder="Enter first name here">
+            <br>
+            <br>
+            <input class="ipt2" placeholder="Enter last name here">
+            <br>
+            <br>
+            <hr>
+            <h1 class="answer">Please enter your age and date of birth</h1>
+            <br>
+            <input class="ipt3" placeholder="Age" type="number" max="99" min="13">
+            <br>
+            <br>
+              <input class="ipt4" name="bday" min="1920-01-01" max="2019-01-01" type="date">
+            <br>
+            <br>
+            <hr>
+            <form id="eyeForm">
+            <h1 class="answer">Please choose your eye color</h1>
+            <br>
+            <input name="eyes" value="Black" type="radio">Black<br>
+            <input name="eyes" value="Blue" type="radio">Blue<br>
+            <input name="eyes" value="Hazel" type="radio">Hazel
+            <br>
+            </form>
+            <br>
+            <br>
+            <button id="btn1">Submit</button>
+            <button class="btn2">Rest</button>
+            <br>
+            <br>
+            <p class="opt"></p>
+            <p class="opt2"></p>
+            <p class="opt3"></p>
+            <p class="opt4"></p>
+            <p class="opt5"></p>
+        </div>
+        
+    </body>
+</html>
+</script>
+
+<script id="jsbin-source-css" type="text/css">body {
+    background-image: url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100%;
+            background-attachment: fixed;
+}
+
+h1{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+    font-family: 'Merienda', cursive;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.questions{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);    
+}
+
+.answer{
+    color: #ff3838;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);       
+}
+
+hr{
+    border: solid red 2px;    
+}
+
+.ipt1{
+    width:150px;
+}
+
+.ipt2{
+    width:150px;
+}
+
+#btn1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    border: groove 4px red;
+    border-radius:10px;    
+}
+
+.btn2{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    border: groove 4px red;
+    border-radius:10px;    
+}
+
+#sur {
+    height: 1570px;
+    width: 850px;
+    margin: 0 auto;
+    background-color: #bdc3c7;
+    opacity: 0.9;
+    border: solid 5px red;
+    text-align: center;
+    border-radius: 10px;
+    border: ridge 6px red;
+    font-family: 'Charmonman', cursive;
+}
+
+.opt{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt2{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt3{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt4{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+.opt5{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    /*color:red;*/
+}
+
+
+</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">var _0x3fdb=['click','userAge','.opt3','userFirst','value','eyeForm','Old\x20enough\x20for\x20a\x20license','btn1','log','printInfo','userLast','.opt','.opt5','.ipt4','Old\x20enough\x20for\x20a\x20permit,\x20but\x20not\x20full\x20license','getElementById','userEyecolor','calcStuff','.ipt2','Too\x20young\x20to\x20drive','innerHTML','querySelector','.ipt3','userBirthday','.opt4','eyes'];(function(_0x1e6404,_0x3feca2){var _0x35b414=function(_0x324875){while(--_0x324875){_0x1e6404['push'](_0x1e6404['shift']());}};_0x35b414(++_0x3feca2);}(_0x3fdb,0x188));var _0x5e37=function(_0x1e6404,_0x3feca2){_0x1e6404=_0x1e6404-0x0;var _0x35b414=_0x3fdb[_0x1e6404];return _0x35b414;};var first;var last;var age;var birthday;var eyecolor;var driveSur={'userFirst':'','userLast':'','userAge':'','userBirthday':'','userEyecolor':'','calcStuff':function(_0x568f09){if(_0x568f09>=0x11){alert(_0x5e37('0x4'));}else if(_0x568f09===0x10){alert(_0x5e37('0xc'));}else{alert(_0x5e37('0x11'));}},'printInfo':function(){document[_0x5e37('0x13')](_0x5e37('0x9'))[_0x5e37('0x12')]=this[_0x5e37('0x1')];document[_0x5e37('0x13')]('.opt2')['innerHTML']=this[_0x5e37('0x8')];document[_0x5e37('0x13')](_0x5e37('0x0'))[_0x5e37('0x12')]=this[_0x5e37('0x19')];document[_0x5e37('0x13')](_0x5e37('0x16'))[_0x5e37('0x12')]=this[_0x5e37('0x15')];document[_0x5e37('0x13')](_0x5e37('0xa'))['innerHTML']=this[_0x5e37('0xe')];}};document['getElementById'](_0x5e37('0x5'))['addEventListener'](_0x5e37('0x18'),function(){first=document[_0x5e37('0x13')]('.ipt1')['value'];last=document[_0x5e37('0x13')](_0x5e37('0x10'))[_0x5e37('0x2')];age=parseInt(document[_0x5e37('0x13')](_0x5e37('0x14'))[_0x5e37('0x2')]);birthday=document[_0x5e37('0x13')](_0x5e37('0xb'))[_0x5e37('0x2')];var _0x1a84dd=document[_0x5e37('0xd')](_0x5e37('0x3'));var _0xd35691=_0x1a84dd[_0x5e37('0x17')][_0x5e37('0x2')];console[_0x5e37('0x6')](_0xd35691);driveSur[_0x5e37('0x1')]=first;driveSur[_0x5e37('0x8')]=last;driveSur[_0x5e37('0x19')]=age;driveSur[_0x5e37('0x15')]=birthday;driveSur[_0x5e37('0xe')]=_0xd35691;console['log'](driveSur['userEyecolor']);driveSur[_0x5e37('0xf')](driveSur['userAge']);driveSur[_0x5e37('0x7')]();});</script></body>
+</html>
